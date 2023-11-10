@@ -138,10 +138,52 @@ console.log("Average Change: $", averageChangeAmount);
 
 // The greatest increase in Profit/Losses (date and amount) over the entire period.
 
+function findGreatestIncrease(finances) {
+  var greatestIncrease = {
+    date: "",
+    amount: 0,
+  };
 
+  for (var i = 1; i < finances.length; i++) {
+    var date = finances[i][0];
+    var increase = finances[i][1] - finances[i - 1][1];
+
+    if (increase > greatestIncrease.amount) {
+      greatestIncrease.date = date;
+      greatestIncrease.amount = increase;
+    }
+  }
+
+  return greatestIncrease;
+}
+
+var greatestIncreaseInfo = findGreatestIncrease(finances);
+console.log("Greatest Increase in Profit: $" + greatestIncreaseInfo.amount + " on " + greatestIncreaseInfo.date);
 
 // The greatest decrease in Profit/Losses (date and amount) over the entire period.
 
+function findGreatestDecrease(finances) {
+  var greatestDecrease = {
+    date: "",
+    amount: 0,
+  };
+
+  for (var i = 1; i < finances.length; i++) {
+    var date = finances[i][0];
+    var decrease = finances[i][1] - finances[i - 1][1];
+
+
+    if (decrease < greatestDecrease.amount) {
+      greatestDecrease.date = date;
+      greatestDecrease.amount = decrease;
+    }
+  }
+
+  return greatestDecrease;
+}
+
+var greatestDecreaseInfo = findGreatestDecrease(finances);
+console.log("Greatest Decrease in Profit: $" + greatestDecreaseInfo.amount + " on " + greatestDecreaseInfo.date);
 
 
 
