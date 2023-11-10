@@ -87,24 +87,115 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+console.log(" Financial Analysis");
+console.log("----------------");
 
 // The total number of months included in the dataset.
 
-console.log(" Total months included in the dataset: " + finances.length);
+console.log(" Total months: " + finances.length);
 
 // The net total amount of Profit/Losses over the entire period.
 
-console.log
-// Amount of profit over entire period
+function calculateNetTotal(finances) {
+  var netTotal = 0;
+
+  for (var i = 0; i < finances.length; i++){
+    netTotal += finances[i][1];
+  }
+  return netTotal;
+}
+
+var netTotalAmount = calculateNetTotal(finances);
+
+
+
+console.log("Net Total: $", netTotalAmount);
 
 // The average of the **changes** in Profit/Losses over the entire period.
   //* You will need to track what the total change in Profit/Losses are from month to month and then find the average.
   //* (`Total/(Number of months - 1)`)
 
+function calculateAverageChange(finances) {
+  var monthlyChanges = [];
 
+  for (var i = 1; i <finances.length; i++) {
+    var change = finances[i][1] - finances[i - 1][1];
+
+    monthlyChanges.push(change);
+  }
+
+  var totalChange = monthlyChanges.reduce(function(total, change) {
+    return total + change;
+  }, 0);
+
+  var averageChange = totalChange / (finances.length -1);
+
+  return averageChange
+}
+
+var averageChangeAmount = calculateAverageChange(finances);
+console.log("Average Change: $", averageChangeAmount);
 
 // The greatest increase in Profit/Losses (date and amount) over the entire period.
 
 
 
 // The greatest decrease in Profit/Losses (date and amount) over the entire period.
+
+
+
+
+// analysis =
+//   "Financial Analysis " + 
+//   "\n" + 
+//   "Total Months: " +
+//   finances.length +
+//   "\n" +
+// "Total: $" +
+// total +
+// "\n" +
+// "Average Change: " +
+// average +
+// "\n" +
+// "Greatest Increase in Profits/Losses: " +
+// greatest[0] +
+// " ($" +
+// greatest[1] +
+// ")\n" +
+// "Greatest Decrease in Profits/Losses: " +
+// least[0] +
+// " ($" +
+// least[1] +
+// ")";
+
+//   console.log(analysis);
+
+
+
+
+
+
+
+
+
+
+
+// Amount of profit over entire period
+
+// function calculateTotalProfit(finances) {
+//   var totalProfit = 0;
+
+//   for (var i = 0; i < finances.length; i++){
+//     var profitLoss = finances[i][1];
+  
+//   if (profitLoss>0) {
+//     totalProfit+= profitLoss;
+//   }
+// }
+// }
+// return totalProfit;
+
+// var totalProfitAmount = calculateTotalProfit(finances);
+
+
+// console.log("Total Profit: $", totalProfitAmount);
