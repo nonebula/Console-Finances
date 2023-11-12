@@ -87,9 +87,6 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-console.log(" Financial Analysis");
-console.log("----------------");
-
 // The total number of months included in the dataset.
 
 console.log(" Total months: " + finances.length);
@@ -187,32 +184,30 @@ console.log("Greatest Decrease in Profit: $" + greatestDecreaseInfo.amount + " o
 
 
 
-// analysis =
-//   "Financial Analysis " + 
-//   "\n" + 
-//   "Total Months: " +
-//   finances.length +
-//   "\n" +
-// "Total: $" +
-// total +
-// "\n" +
-// "Average Change: " +
-// average +
-// "\n" +
-// "Greatest Increase in Profits/Losses: " +
-// greatest[0] +
-// " ($" +
-// greatest[1] +
-// ")\n" +
-// "Greatest Decrease in Profits/Losses: " +
-// least[0] +
-// " ($" +
-// least[1] +
-// ")";
+analysis =
+  "Financial Analysis " + 
+  "\n" + 
+  "Total Months: " +
+  finances.length +
+  "\n" +
+"Total: $" +
+total +
+"\n" +
+"Average Change: " +
+average +
+"\n" +
+"Greatest Increase in Profits/Losses: " +
+greatest[0] +
+" ($" +
+greatest[1] +
+")\n" +
+"Greatest Decrease in Profits/Losses: " +
+least[0] +
+" ($" +
+least[1] +
+")";
 
-//   console.log(analysis);
-
-
+  console.log(analysis);
 
 
 
@@ -222,22 +217,3 @@ console.log("Greatest Decrease in Profit: $" + greatestDecreaseInfo.amount + " o
 
 
 
-// Amount of profit over entire period
-
-// function calculateTotalProfit(finances) {
-//   var totalProfit = 0;
-
-//   for (var i = 0; i < finances.length; i++){
-//     var profitLoss = finances[i][1];
-  
-//   if (profitLoss>0) {
-//     totalProfit+= profitLoss;
-//   }
-// }
-// }
-// return totalProfit;
-
-// var totalProfitAmount = calculateTotalProfit(finances);
-
-
-// console.log("Total Profit: $", totalProfitAmount);
