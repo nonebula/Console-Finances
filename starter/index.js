@@ -187,6 +187,8 @@ console.log("Greatest Decrease in Profit: $" + greatestDecreaseInfo.amount + " o
 analysis =
   "Financial Analysis " + 
   "\n" + 
+  "-----------------" +
+  "\n" + 
   "Total Months: " +
   finances.length +
   "\n" +
