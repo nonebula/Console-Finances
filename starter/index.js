@@ -89,7 +89,7 @@ var finances = [
 
 // The total number of months included in the dataset.
 
-console.log(" Total months: " + finances.length);
+// console.log(" Total months: " + finances.length);
 
 // The net total amount of Profit/Losses over the entire period.
 
@@ -103,10 +103,6 @@ function calculateNetTotal(finances) {
 }
 
 var netTotalAmount = calculateNetTotal(finances);
-
-
-
-console.log("Net Total: $", netTotalAmount);
 
 // The average of the **changes** in Profit/Losses over the entire period.
   //* You will need to track what the total change in Profit/Losses are from month to month and then find the average.
@@ -131,7 +127,6 @@ function calculateAverageChange(finances) {
 }
 
 var averageChangeAmount = calculateAverageChange(finances);
-console.log("Average Change: $", averageChangeAmount);
 
 // The greatest increase in Profit/Losses (date and amount) over the entire period.
 
@@ -154,8 +149,7 @@ function findGreatestIncrease(finances) {
   return greatestIncrease;
 }
 
-var greatestIncreaseInfo = findGreatestIncrease(finances);
-console.log("Greatest Increase in Profit: $" + greatestIncreaseInfo.amount + " on " + greatestIncreaseInfo.date);
+var greatestIncrease = findGreatestIncrease(finances);
 
 // The greatest decrease in Profit/Losses (date and amount) over the entire period.
 
@@ -179,8 +173,7 @@ function findGreatestDecrease(finances) {
   return greatestDecrease;
 }
 
-var greatestDecreaseInfo = findGreatestDecrease(finances);
-console.log("Greatest Decrease in Profit: $" + greatestDecreaseInfo.amount + " on " + greatestDecreaseInfo.date);
+var greatestDecrease = findGreatestDecrease(finances);
 
 
 
@@ -193,20 +186,20 @@ analysis =
   finances.length +
   "\n" +
 "Total: $" +
-total +
+netTotalAmount +
 "\n" +
-"Average Change: " +
-average +
+"Average Change: $" +
+averageChangeAmount +
 "\n" +
 "Greatest Increase in Profits/Losses: " +
-greatest[0] +
+greatestIncrease.date +
 " ($" +
-greatest[1] +
+greatestIncrease.amount +
 ")\n" +
 "Greatest Decrease in Profits/Losses: " +
-least[0] +
+greatestDecrease.date +
 " ($" +
-least[1] +
+greatestDecrease.amount +
 ")";
 
   console.log(analysis);
