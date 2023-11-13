@@ -40,9 +40,7 @@ To navigate to the relevant section of the website, open the console using the '
 
 ## Credits
 
-The project was completed independently but built off the source code from: edX Boot Camps LLC. I worked with my tutor, Juan Delgado, to identify issues and to format my code effectively. We also discussed how effective use of flexboxes has made my work more efficient.
-
-In producing this webpage, I utilized a range of tutorials from W3 Schools and referred to several posts on Stack Overflow.
+The project was completed independently but built off the source code from: edX Boot Camps LLC. I worked with a friend, Sam Millar, to explore the fundamentals of Javascript and clarify my work. I also worked through the modules on Codecademy to better develop my understanding to enable me to solve these challenges. In producing this webpage, I also utilized a range of tutorials from W3 Schools and referred to multiple posts on Stack Overflow.
 
 ## License
 
