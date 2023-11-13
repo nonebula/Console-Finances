@@ -87,9 +87,7 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// The total number of months included in the dataset.
-
-// console.log(" Total months: " + finances.length);
+// The total number of months included in the dataset (total months + finances.length)
 
 // The net total amount of Profit/Losses over the entire period.
 
@@ -122,6 +120,8 @@ function calculateAverageChange(finances) {
   }, 0);
 
   var averageChange = totalChange / (finances.length -1);
+
+  averageChange = +averageChange.toFixed(2);
 
   return averageChange
 }
@@ -176,6 +176,7 @@ function findGreatestDecrease(finances) {
 var greatestDecrease = findGreatestDecrease(finances);
 
 
+// Print to console analysis
 
 analysis =
   "Financial Analysis " + 
